@@ -1,0 +1,13 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:azure:baseInterface;1",
+    "@type": "Interface",
+    "displayName": "Base Interface",
+    "contents" : [
+        { 
+            "@type" : "Property", 
+            "name" : "refreshInterval", 
+            "schema" : "integer" 
+        }
+    ]
+}
