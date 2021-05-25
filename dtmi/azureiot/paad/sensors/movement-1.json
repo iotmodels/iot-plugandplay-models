@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;2", 
+    "dtmi:iotcentral:context;2"
+  ],
+  "@id": "dtmi:azureiot:PaaD:Sensors:Movement;1",
+  "@type": "Interface",
+  "extends": ["dtmi:azureiot:PaaD:Sensors:baseSensor;1"],
+  "displayName": "Movement",
+  "contents": [
+    {
+      "@type": [
+        "Telemetry",
+        "AccelerationVector"
+      ],
+      "displayName": "Acceleration",
+      "name": "accelerometer",
+      "schema": "vector"
+    },
+    {
+      "@type": "Telemetry",
+      "displayName": "Rotation",
+      "name": "gyroscope",
+      "schema": "vector"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:azureiot:PaaD:IoTPhone;1",
+  "@type": "Interface",
+  "displayName": "IoT Phone",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "AppTheme",
+      "writable": true,
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "light",
+            "enumValue": "Light"
+          },
+          {
+            "enumValue": "Dark",
+            "name": "dark"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "restartApp"
+    },
+    {
+      "@type": "Command",
+      "commandType": "synchronous",
+      "displayName": {
+        "en": "LightOn"
+      },
+      "name": "lightOn",
+      "request": {
+        "@type": "CommandPayload",
+        "displayName": {
+          "en": "Parameters"
+        },
+        "name": "parameters",
+        "schema": {
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "displayName": {
+                "en": "Duration"
+              },
+              "name": "duration",
+              "schema": "integer"
+            },
+            {
+              "displayName": {
+                "en": "Pulses interval"
+              },
+              "name": "delay",
+              "schema": "integer"
+            },
+            {
+              "displayName": {
+                "en": "Pulses"
+              },
+              "name": "pulses",
+              "schema": "integer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Component",
+      "displayName": "Device information",
+      "name": "deviceInfo",
+      "schema": "dtmi:azure:DeviceManagement:DeviceInformation;1"
+    },
+    {
+      "@type": "Component",
+      "name": "battery",
+      "schema": "dtmi:azureiot:PaaD:Sensors:Battery;1"
+    },
+    {
+      "@type": "Component",
+      "name": "location",
+      "schema": "dtmi:azureiot:PaaD:Sensors:Location;1"
+    },
+    {
+      "@type": "Component",
+      "name": "magnet",
+      "schema": "dtmi:azureiot:PaaD:Sensors:Magnet;1"
+    },
+    {
+      "@type": "Component",
+      "name": "movement",
+      "schema": "dtmi:azureiot:PaaD:Sensors:Movement;1"
+    },
+    {
+      "@type": "Component",
+      "name": "pressure",
+      "schema": "dtmi:azureiot:PaaD:Sensors:Pressure;1"
+    }
+  ]
+}
